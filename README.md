@@ -10,8 +10,7 @@ Quantum Cup is an app to connect coffee enthusiasts and coffee shops.
 ## Installation
 This system is containerized and requires Docker to be installed on your host
 system before proceeding with the installation. Here are the steps to follow:
-- Download the source code from
-  https://gitlab.com/galvanize9283031/quantum-cup/-/archive/main/quantum-cup-main.zip
+- Download the source code from https://github.com/marcioreisjr/quantum-cup/archive/refs/tags/VER_1_0_0.zip
 - Decompress the image and navigate to the uncompressed directory.
 - Copy the `.env.sample` file to `.env` and replace the values of the
   `DATABASE_URL` environment variables (see next step).
