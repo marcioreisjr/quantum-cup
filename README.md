@@ -2,7 +2,6 @@
 Quantum Cup is an app to connect coffee enthusiasts and coffee shops.
 
 ## Team
-- Anthony
 - Howard
 - John
 - Márcio
