@@ -83,7 +83,7 @@ function LoginForm({ setAlert, quantumAuth }) {
           </form>
         </div>
         <div className="col-12 col-md-6 logo-signup">
-          <img src="https://i.imgur.com/zlzNSFj.png" alt="coffee log" width={"70%"}></img>
+          <img src="https://i.imgur.com/zlzNSFj.png" alt="coffee log" width={"70%"} referrerPolicy="no-referrer"></img>
         </div>
       </div>
     </div>

@@ -21,7 +21,7 @@ function Nav({ quantumAuth }) {
     <nav className="navbar navbar-expand-lg navbar-light mb-3 fixed-top">
       <div className="container-fluid">
         <NavLink className="navbar-brand fw-bold fs-3" to="/">
-          <img src='https://i.imgur.com/IFkxtPY.png' height={"60px"} alt='logo' />
+          <img src='https://i.imgur.com/IFkxtPY.png' height={"60px"} alt='logo' referrerPolicy="no-referrer" />
           Quantum Cup
         </NavLink>
 

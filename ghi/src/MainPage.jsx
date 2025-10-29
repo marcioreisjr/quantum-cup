@@ -23,7 +23,7 @@ function MainPage({ setAlert, quantumAuth }) {
     <div>
       <div className="d-flex flex-column flex-md-row ">
         <div className="d-flex align-items-center hero-interaction flex-column col-12 col-md-6 ">
-          <img src="https://i.imgur.com/jN2wPcE.png" alt="coffee logo" width={"33%"} className="mt-5"></img>
+          <img src="https://i.imgur.com/jN2wPcE.png" alt="coffee logo" width={"33%"} className="mt-5" referrerPolicy="no-referrer"></img>
           <div className="h4 my-5 text-center">A unique community of coffee enthusiasts</div>
           <div className="d-flex">
             <Link className="btn" to="/signup">Sign Up</Link>
@@ -31,7 +31,7 @@ function MainPage({ setAlert, quantumAuth }) {
           </div>
         </div>
         <div className="col-12 col-md-6">
-          <img src="https://i.imgur.com/PgiFw0h.pnggi" alt="coffee" width={"100%"}></img>
+          <img src="https://i.imgur.com/PgiFw0h.png" alt="coffee" width={"100%"} referrerPolicy="no-referrer"></img>
         </div>
       </div>
     </div>

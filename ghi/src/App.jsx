@@ -20,7 +20,7 @@ import OrderList from './orders/BuyersListOfOrders/OrderList';
 import VendorDetail from './vendors/VendorDetailPage';
 import VendorList from './vendors/VendorList';
 
-const baseUrl = process.env.REACT_APP_API_HOST;
+const baseUrl = import.meta.env.VITE_API_HOST;
 
 function App() {
   const [showAlert, setShowAlert] = useState(false);
@@ -35,7 +35,7 @@ function App() {
   const quantumAuth = { setAuthentication, baseUrl, getAuthentication, isAuthenticated, };
 
   const domain = /https:\/\/[^/]+/;
-  const basename = process.env.PUBLIC_URL.replace(domain, "");
+  const basename = (import.meta.env.VITE_PUBLIC_URL || "").replace(domain, "");
 
   // send product data to form
   function handleClick(product) {

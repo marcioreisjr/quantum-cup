@@ -12,7 +12,7 @@ async function login(quantumAuth, username, password, role) {
     const url = `${quantumAuth.baseUrl}/token`;
     const form = new FormData();
     form.append("username", username + "::" + role);
-    form.append("password", password);
+    form.append("password", password.slice(0, 72));
     let res;
     try {
         res = await fetch(url, {

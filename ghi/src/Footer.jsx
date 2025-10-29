@@ -6,7 +6,7 @@ function Footer() {
       <div className="mb-3">
         <div className="row g-0 footer-panels">
           <div className="d-flex d-none d-md-block col-md-4">
-            <img src="https://i.imgur.com/IFkxtPY.png" className="img-fluid " alt="Quantum Cup Logo" />
+            <img src="https://i.imgur.com/IFkxtPY.png" className="img-fluid " alt="Quantum Cup Logo" referrerPolicy="no-referrer" />
           </div>
 
           <div className="d-flex flex-column col-8">

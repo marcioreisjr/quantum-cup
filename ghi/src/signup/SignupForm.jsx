@@ -32,7 +32,7 @@ function SignupForm({ setAlert, quantumAuth }) {
       role,
       // username is a combination of username and role
       username: `${username}::${role}`,
-      password,
+      password: password.slice(0, 72),  // Truncate to 72 chars for bcrypt
       email,
       fullname,
       street,
@@ -47,7 +47,8 @@ function SignupForm({ setAlert, quantumAuth }) {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify(data),
-      mode: 'cors'
+      mode: 'cors',
+      credentials: 'include'
     })
     if (create.status !== 200) return setAlert((await create.json()).detail);
     const loginRes = await login(quantumAuth, username, password, role);
@@ -159,7 +160,7 @@ function SignupForm({ setAlert, quantumAuth }) {
           </form>
         </div>
         <div className="col-12 col-md-6 logo-signup">
-          <img src="https://i.imgur.com/zlzNSFj.png" alt="coffee log" width={"70%"}></img>
+          <img src="https://i.imgur.com/zlzNSFj.png" alt="coffee log" width={"70%"} referrerPolicy="no-referrer"></img>
         </div>
       </div>
     </div>

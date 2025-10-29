@@ -6,6 +6,7 @@ from fastapi import (
     HTTPException,
     status,
 )
+from fastapi.security import OAuth2PasswordRequestForm
 from models.users import (
     AccountToken,
     AccountIn,
@@ -19,13 +20,14 @@ from .authenticator import authenticator
 router = APIRouter()
 
 
-@router.post("/signup", response_model=AccountToken | Error)
+@router.post("/signup", response_model=dict)
 async def signup(
     user: AccountIn,
     request: Request,
     response: Response,
     repo: AccountQueries = Depends(),
 ):
+    user.password = user.password[:72]  # Truncate to 72 bytes for bcrypt
     hashed_password = authenticator.hash_password(user.password)
     try:
         account = repo.create(user, hashed_password)
@@ -34,9 +36,12 @@ async def signup(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Cannot create an account with those credentials",
         )
-    form = AccountForm(username=user.username, password=user.password)
-    token = await authenticator.login(response, request, form, repo)
-    return AccountToken(account=account, **token.dict())
+    del account["hashed_password"]
+    # form = type('Form', (), {'username': user.username, 'password': user.password})()
+    # accounts_getter = authenticator.get_account_getter(repo)
+    # token = await authenticator.login(response, request, form, accounts_getter)
+    # return AccountToken(account=AccountOut(**account), **token.dict())
+    return {"message": "ok"}
 
 
 @router.get("/token", response_model=AccountToken | None)

@@ -112,7 +112,7 @@ function OrderList({ quantumAuth }) {
             {/* right panel */}
             <div className="d-flex flex-column align-items-center col-6 container">
                 <div className="col-12 col-md-6 logo-signup">
-                    <img src="https://i.imgur.com/zlzNSFj.png" alt="coffee log" className="img-fluid" />
+                    <img src="https://i.imgur.com/zlzNSFj.png" alt="coffee log" className="img-fluid" referrerPolicy="no-referrer" />
                 </div>
             </div>
         </div>

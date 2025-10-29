@@ -38,6 +38,7 @@ class AccountQueries(Queries):
         # Assign a string representation of the MongoDB ObjectId as the account
         # ID
         account["id"] = str(account["_id"])
+        del account["_id"]
         return account
 
     def get_one_by_username(self, username: str):
