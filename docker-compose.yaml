@@ -24,7 +24,7 @@ services:
     volumes:
       - ./ghi:/app
     ports:
-      - "3030:3000"
+      - "3000:3000"
     environment:
        HOST_OS: ${OS}
        NODE_ENV: development
