@@ -5,5 +5,5 @@ fastapi[all]==0.92.0
 jwtdown-fastapi==0.5.0
 pymongo==4.6.3
 pytest==9.0.3
-python-dotenv==1.0.1
+python-dotenv==1.2.2
 Whoosh==2.7.4
